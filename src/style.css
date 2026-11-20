@@ -1,0 +1,334 @@
+
+/* ==========================================
+   CYPRESS TESTING LAB - DISEÑO PROFESIONAL
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 35px 20px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #f8fafc;
+    background:
+        radial-gradient(circle at 0% 20%, #21104c, transparent 30%),
+        radial-gradient(circle at 100% 80%, #101c50, transparent 35%),
+        #050a1b;
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+main {
+    max-width: 1320px;
+    margin: auto;
+    padding: 25px 35px;
+    background: rgba(10, 18, 43, 0.88);
+    border: 1px solid #263768;
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(70, 50, 180, 0.15);
+}
+
+/* ENCABEZADO */
+
+header {
+    text-align: center;
+    padding: 10px 0 25px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #29385f;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+h1 span {
+    color: #a78bfa;
+}
+
+.subtitle {
+    color: #a5b4d4;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-top: 10px;
+}
+
+/* TARJETAS */
+
+.ejercicio {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 25px;
+    align-items: start;
+    padding: 25px;
+    margin-bottom: 14px;
+    background: linear-gradient(120deg, #101a38, #0c1530);
+    border: 1px solid #29385f;
+    border-left: 5px solid var(--accent);
+    border-radius: 13px;
+    transition: 0.3s ease;
+}
+
+.ejercicio:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* ICONOS */
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 13px;
+    font-size: 39px;
+    color: var(--accent);
+    background: var(--icon-bg);
+    border: 1px solid var(--icon-border);
+}
+
+/* COLORES DE CADA EJERCICIO */
+
+.ejercicio:nth-of-type(1) {
+    --accent: #a855f7;
+    --icon-bg: rgba(168, 85, 247, 0.12);
+    --icon-border: rgba(168, 85, 247, 0.25);
+}
+
+.ejercicio:nth-of-type(2) {
+    --accent: #168bff;
+    --icon-bg: rgba(22, 139, 255, 0.12);
+    --icon-border: rgba(22, 139, 255, 0.25);
+}
+
+.ejercicio:nth-of-type(3) {
+    --accent: #10d58a;
+    --icon-bg: rgba(16, 213, 138, 0.12);
+    --icon-border: rgba(16, 213, 138, 0.25);
+}
+
+.ejercicio:nth-of-type(4) {
+    --accent: #ffb000;
+    --icon-bg: rgba(255, 176, 0, 0.12);
+    --icon-border: rgba(255, 176, 0, 0.25);
+}
+
+.ejercicio:nth-of-type(5) {
+    --accent: #a855f7;
+    --icon-bg: rgba(168, 85, 247, 0.12);
+    --icon-border: rgba(168, 85, 247, 0.25);
+}
+
+/* CONTENIDO DE TARJETAS */
+
+.card-content {
+    min-width: 0;
+}
+
+h2 {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 17px;
+}
+
+/* CAMPOS */
+
+input,
+textarea {
+    width: 100%;
+    max-width: 370px;
+    padding: 12px 15px;
+    margin: 0 8px 10px 0;
+    background: #080f25;
+    color: white;
+    border: 1px solid #39476f;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #a5b4d4;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--accent, #a855f7);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+}
+
+/* BOTONES */
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background: linear-gradient(135deg, #842be9, #5b28ce);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.ejercicio:nth-of-type(2) button {
+    background: linear-gradient(135deg, #168bff, #0759c5);
+}
+
+.ejercicio:nth-of-type(3) button {
+    background: linear-gradient(135deg, #0bbd79, #078b58);
+}
+
+.ejercicio:nth-of-type(4) button {
+    background: linear-gradient(135deg, #f6ad16, #bd7900);
+}
+
+button:hover {
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* RESULTADOS */
+
+p[id],
+#total {
+    display: block;
+    padding: 11px 14px;
+    margin-top: 5px;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    border-radius: 7px;
+    background: rgba(56, 189, 248, 0.06);
+    color: #38bdf8;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+p[id]:empty {
+    display: none;
+}
+
+/* RESULTADOS POR EJERCICIO */
+
+#resultadoDescuento {
+    color: #ff6b6b;
+    border-color: rgba(239, 68, 68, 0.4);
+    background: rgba(239, 68, 68, 0.06);
+}
+
+#resultadoPuntos,
+#respuestaFormulario {
+    color: #38bdf8;
+}
+
+/* LISTA DE TAREAS */
+
+ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+li {
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border: 1px solid rgba(16, 213, 138, 0.25);
+    border-radius: 7px;
+    background: rgba(16, 213, 138, 0.05);
+    color: white;
+}
+
+li::before {
+    content: "●";
+    color: #10d58a;
+    margin-right: 15px;
+}
+
+/* FORMULARIO */
+
+#formulario {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+}
+
+#formulario input,
+#formulario textarea {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+}
+
+#formulario textarea {
+    min-height: 65px;
+    resize: vertical;
+}
+
+#formulario button {
+    justify-self: start;
+}
+
+#formulario p {
+    grid-column: 1 / -1;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    text-align: center;
+    padding: 10px;
+    color: #8492b8;
+    font-size: 14px;
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 700px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .ejercicio {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 18px;
+    }
+
+    .card-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 28px;
+    }
+
+    #formulario {
+        grid-template-columns: 1fr;
+    }
+
+    input,
+    textarea {
+        max-width: 100%;
+    }
+}

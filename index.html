@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prácticas de Cypress</title>
+</head>
+
+<body>
+
+    <main>
+
+        <header>
+            <h1>Prácticas de <span>Cypress</span></h1>
+            <p class="subtitle">
+                LABORATORIO DE AUTOMATIZACIÓN DE PRUEBAS
+            </p>
+        </header>
+
+        <!-- EJERCICIO 1 -->
+        <section class="ejercicio">
+
+            <div class="card-icon">🏷️</div>
+
+            <div class="card-content">
+                <h2>1. Código de descuento</h2>
+
+                <input type="text" id="codigo"
+                    placeholder="Escribe tu código">
+
+                <button id="validar" type="button">
+                    🏷️ Validar descuento
+                </button>
+
+                <p id="resultadoDescuento"></p>
+            </div>
+
+        </section>
+
+        <!-- EJERCICIO 2 -->
+        <section class="ejercicio">
+
+            <div class="card-icon">⭐</div>
+
+            <div class="card-content">
+                <h2>2. Puntos de fidelidad</h2>
+
+                <input type="number" id="compra"
+                    placeholder="Monto de compra">
+
+                <button id="calcular" type="button">
+                    📊 Calcular puntos
+                </button>
+
+                <p id="resultadoPuntos"></p>
+            </div>
+
+        </section>
+
+        <!-- EJERCICIO 3 -->
+        <section class="ejercicio">
+
+            <div class="card-icon">📋</div>
+
+            <div class="card-content">
+                <h2>3. Lista de tareas</h2>
+
+                <input type="text" id="tarea"
+                    placeholder="Escribe una tarea">
+
+                <button id="agregarTarea" type="button">
+                    ➕ Agregar tarea
+                </button>
+
+                <ul id="listaTareas"></ul>
+            </div>
+
+        </section>
+
+        <!-- EJERCICIO 4 -->
+        
+<!-- EJERCICIO 4: CARRITO DE COMPRAS -->
+<section class="ejercicio">
+
+    <div class="card-icon">🛒</div>
+
+    <div class="card-content">
+
+        <h2>4. Carrito de compras</h2>
+
+        <div class="campos-carrito">
+
+            <input
+                type="text"
+                id="nombreProducto"
+                placeholder="Nombre del producto"
+            >
+
+            <input
+                type="number"
+                id="precioProducto"
+                placeholder="Precio ($)"
+                min="0.01"
+                step="0.01"
+            >
+
+            <button id="agregarProducto" type="button">
+                ➕ Agregar producto
+            </button>
+
+        </div>
+
+        <h3 class="titulo-lista">Productos agregados</h3>
+
+        <ul id="listaCarrito"></ul>
+
+        <p id="mensajeCarrito"></p>
+
+        <div class="total-carrito">
+            <span>💰 Total de compra:</span>
+            <strong id="total">Total: $0</strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+        <!-- EJERCICIO 5 -->
+        <section class="ejercicio">
+
+            <div class="card-icon">✉️</div>
+
+            <div class="card-content">
+                <h2>5. Formulario de contacto</h2>
+
+                <form id="formulario">
+
+                    <input type="text" id="nombre"
+                        placeholder="Nombre">
+
+                    <input type="email" id="correo"
+                        placeholder="Correo electrónico">
+
+                    <textarea id="mensaje"
+                        placeholder="Mensaje"></textarea>
+
+                    <button type="submit">
+                        ➤ Enviar mensaje
+                    </button>
+
+                    <p id="respuestaFormulario"></p>
+
+                </form>
+            </div>
+
+        </section>
+
+        <footer>
+            🛡️ Prácticas de Cypress · Laboratorio de automatización de pruebas
+        </footer>
+
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+
+</body>
+</html>

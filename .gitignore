@@ -1,0 +1,8 @@
+# Ignorar dependencias de Node.js
+node_modules/
+
+# Ignorar archivos de configuración local
+.env
+
+# Ignorar archivos temporales
+.DS_Store
